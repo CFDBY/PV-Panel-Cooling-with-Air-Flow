@@ -68,6 +68,35 @@ Q_{\text{input}} = 800 \times 2.4 = 1920 \, \text{W}
 
 ![Heat Transfer Analysis](Total_Heat_Transfer_Rate.png)
 
+
+## Revision Notes for Heat Flux Implementation
+
+### Issue Identified
+In my previous simulation, I applied a heat flux of 800 W/m² uniformly across **four surfaces**.  
+This configuration is **physically unrealistic** for solar panels, as incident heat flux only originates from the **top surface** in real-world scenarios.
+
+### Impact & Corrections
+While the model remains **mathematically valid**, the unphysical setup affected key results.  
+To resolve this, I've updated:
+1. **Total Heat Transfer Rate** graph  
+2. **Area-Weighted Static Temperature** distributions  
+
+### Visual Documentation
+![Total Heat Transfer Rate](total_heat_transfer.png)  
+![Area Weighted Average of Temperature](temperature.png)  
+
+### Key Technical Takeaways
+- **Physical vs. Mathematical Validity**: Aligning boundary conditions with real-world constraints is critical.  
+- **Data Transparency**: Revisions documented with standardized graphs for reproducibility.  
+
+---
+
+
+
+
+
+
+
 ---
 
 ## 📉 MATLAB Code Analysis
